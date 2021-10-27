@@ -55,6 +55,7 @@ while True:
 
 cap.set(img_frame_start,0)
 cnt = 0
+# res = True
 
 while True:
     # Capture frame-by-frame
@@ -115,6 +116,10 @@ while True:
         cv2.drawContours(frame, contours, -1, (0, 0, 255), 3)
         cv2.rectangle(frame,(x_min, y_min),(x_max, y_max),(0,255,0),3)
         cv2.putText(frame, f"Tiger : {conf[0]*100:.2f}%", (x_min,y_min-5), cv2.FONT_HERSHEY_PLAIN, 1.5, (0,255,255), 2)
+        # if conf[0]>0.9 and res:
+        #     cv2.imwrite('results/MobileNet.png',frame)
+        #     res=False
+
 
     
     # break
