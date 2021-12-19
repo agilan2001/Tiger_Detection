@@ -11,10 +11,6 @@ Frame from Video Feed
 Background Subtraction
 </p>
 <p>
-<img src="results/Edged.png" height="200"><br>
-Canny Edges
-</p>
-<p>
 <img src="results/Bounded.png" height="200"><br>
 Bounding Box
 </p>
