@@ -30,7 +30,6 @@ bg_avg = np.zeros((frame_height,frame_width,3), dtype="uint8")
 
 while True:
     cnt += 1
-    print(cnt)
     if(cnt==frame_cnt): 
         cnt = 0
         bg_avg = np.zeros((frame_height,frame_width,3), dtype="uint8")
@@ -44,7 +43,7 @@ while True:
     
     if(cnt<bg_frame_cnt) :
         bg_avg+=(frame//bg_frame_cnt)
-        cv2.imshow("Back_AVG", bg_avg)
+        # cv2.imshow("Back_AVG", bg_avg)
         continue
 
     subt = cv2.subtract(frame,bg_avg)
